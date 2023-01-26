@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+  --primary-bg: #242526;
+  --secondary-bg:#FFFFFF;
+  --border-color: #E4E5EB;
+  --primary-text-color: #001F80;
+  --background-color: #E8EDFC;
+  --border-radius: 8px;
+  --speed: 500ms;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  background-color: var(--primary-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.kode {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.trigger{
+  padding: 0;
+  outline: none;
+  border: none;
+background: none;
+  position: absolute;
+width: 69px;
+height: 40px;
+left: 923px;
+top: 144px;
+padding: 13px 16px;
+font-family: 'Switzer Variable';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 14px;
+color: var(--primary-text-color);
+  overflow: hidden;
+  cursor: pointer;
+background-color: var(--background-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-page{
+  display: flex;
+flex-direction: row;
+align-items: flex-start;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 40px 32px 32px;
+position: absolute;
+width: 384px;
+height: 882px;
+left: 1056px;
+top: 80px;
+background-color: var(--secondary-bg);
+border-left: 1px solid var(--background-color);
+}
+
+
+.dropdown-page.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdown-page.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+
+
+.dropdownItem{
+margin: 0;
 }
